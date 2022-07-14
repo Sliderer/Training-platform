@@ -160,7 +160,6 @@ namespace Training_platfomt
             {
                 ChangeGridinAccount(ProfileGrid);
             }
-
         }
 
         public static void CoursePanel_ChooseCourseEvent(object sender, RoutedEventArgs e)
@@ -176,6 +175,7 @@ namespace Training_platfomt
             ChangeGridinAccount(CurrentCourseGrid);
             CourseTitle.Text = course.title;
             CourseDiscription.Text = course.discription;
+            CourseVideo.Source = new Uri(course.link);
         }
 
         private void ChangeGridinAccount(Grid grid)

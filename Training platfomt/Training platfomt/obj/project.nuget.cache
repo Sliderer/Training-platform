@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AfPWpN7MG/e00ZVtAvycy2vC/vhRl925PLdr+y6ll6U1HoEKP5PPMETk9FKkYSbUfWNv8/fCY1sMg1G1tWQiwQ==",
+  "dgSpecHash": "hXQgto0UbwOEw79XCIgSDZHKVFGCZdbS8OCnF4GMNIudDBmFsAWQKn3DjPdNXHTEKB1eF+6c060sBQtXkOHYuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
+  "projectFilePath": "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a6271\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\a6271\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\microsoft.web.webview2.1.0.1264.42.nupkg.sha512",
     "C:\\Users\\a6271\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\a6271\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\a6271\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

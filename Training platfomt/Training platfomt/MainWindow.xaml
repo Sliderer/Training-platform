@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Training_platfomt"
+        xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800"
         WindowStyle="None"
-        AllowsTransparency="True">
+        AllowsTransparency="False">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -42,8 +43,8 @@
         <Grid x:Name="EnterGrid"
               Visibility="Visible"
               Grid.Row="1">
-            
-            
+
+           
 
             <Grid x:Name="RegistrationGrid"
                   Visibility="Hidden">
@@ -190,6 +191,11 @@
                     <TextBlock Text="WPF DESIGN" 
                            x:Name="CourseDiscription"
                            Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
+
+                    <wpf:WebView2 Name="CourseVideo"
+                                  Height="200" Width="600"
+                                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                                  Margin="10"/>
                 </StackPanel>
    
             </Grid>

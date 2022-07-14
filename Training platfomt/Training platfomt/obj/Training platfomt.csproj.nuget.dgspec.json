@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\Training platfomt.csproj": {}
+    "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\Training platfomt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\Training platfomt.csproj": {
+    "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\Training platfomt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
+        "projectUniqueName": "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
         "projectName": "Training platfomt",
-        "projectPath": "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
+        "projectPath": "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\Training platfomt.csproj",
         "packagesPath": "C:\\Users\\a6271\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a6271\\source\\repos\\Training platfomt\\Training platfomt\\obj\\",
+        "outputPath": "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Training-platform\\Training platfomt\\Training platfomt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.1264.42, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
