@@ -1,0 +1,201 @@
+﻿<Window x:Class="Training_platfomt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Training_platfomt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800"
+        WindowStyle="None"
+        AllowsTransparency="True">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Name="ToolBarGrid"
+              Background="{StaticResource Dark}"
+              MouseDown="ToolBarGrid_MouseDown">
+
+            <Button Name="ExitButton" 
+                    Style="{StaticResource ToolBarButton}"
+                    Margin="0,0,0,0"
+                    Background="{StaticResource Red}"
+                    Click="ExitButton_Click"/>
+
+            <Button x:Name="MaximizedButton"
+                    Style="{StaticResource ToolBarButton}"
+                    Margin="0,0,20,0"
+                    Background="{StaticResource Green}"
+                    Click="MaximizedButton_Click"/>
+
+            <Button x:Name="MinimazeButton"
+                    Style="{StaticResource ToolBarButton}"
+                    Margin="0,0,40,0"
+                    Background="{StaticResource Yellow}"
+                    Click="MinimazeButton_Click"/>
+        </Grid>
+
+        <Grid x:Name="EnterGrid"
+              Visibility="Visible"
+              Grid.Row="1">
+            
+            
+
+            <Grid x:Name="RegistrationGrid"
+                  Visibility="Hidden">
+                <StackPanel Orientation="Vertical" 
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Регистрация" Style="{StaticResource HeadingTextEnterGrid}"/>
+
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource RegistrationGridStackPanel}">
+                        <TextBlock Text="Логин" Style="{StaticResource TextEnterGrid}"/>
+                        <TextBox Name="LoginRegistrationGridTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource RegistrationGridStackPanel}">
+                        <TextBlock Text="Имя" Style="{StaticResource TextEnterGrid}"/>
+                        <TextBox Name="NameRegistrationGridTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource RegistrationGridStackPanel}">
+                        <TextBlock Text="Фамилия" Style="{StaticResource TextEnterGrid}"/>
+                        <TextBox Name="SurnameRegistrationGridTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource RegistrationGridStackPanel}">
+                        <TextBlock Text="Почта" Style="{StaticResource TextEnterGrid}"/>
+                        <TextBox Name="EmailRegistrationGridTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource RegistrationGridStackPanel}">
+                        <TextBlock Text="Пароль" Style="{StaticResource TextEnterGrid}"/>
+                        <TextBox Name="PasswordRegistrationGridTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+                    </StackPanel>
+
+                    <Button Content="Зарегистрироваться" 
+                            Style="{StaticResource MainEnterGridButton}"
+                            Name="CreateAccountButton"
+                            Click="CreateAccountButton_Click"/>
+
+                    <Button Content="Войти"
+                            Style="{StaticResource EnterGridButton}"
+                            Click="ChangeEnterGrid"/>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Name="LoginGrid" 
+                  Visibility="Visible"
+                  >
+                
+                <StackPanel Orientation="Vertical"
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Войти" Style="{StaticResource HeadingTextEnterGrid}"/>
+
+                    <TextBlock Text="Логин" Style="{StaticResource TextEnterGrid}"/>
+                    <TextBox  Name="LoginLoginTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+
+                    <TextBlock Text="Пароль" Style="{StaticResource TextEnterGrid}"/>
+                    <TextBox  Name="LoginPasswordTextBox"  Style="{StaticResource TextBoxEnterGrid}"/>
+
+                    <Button Content="Войти" 
+                            Style="{StaticResource MainEnterGridButton}"
+                            Name="LoginButton"
+                            Click="LoginButton_Click"/>
+
+                    <Button Content="Зарегистрироваться"
+                            Style="{StaticResource EnterGridButton}"
+                            Click="ChangeEnterGrid"/>
+
+                </StackPanel>
+
+
+            </Grid>
+        </Grid>
+
+        <Grid Name="AccountGrid"
+              Visibility="Hidden"
+              Grid.Row="1" Grid.RowSpan="2">
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"
+                              MinWidth="80"
+                              MaxWidth="150"
+                              x:Name="MenuBarColumn"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" 
+              Grid.Column="0"
+              Background="{StaticResource Honey}"
+              Name="MenuBarPanel">
+
+
+
+                <StackPanel>
+                    <StackPanel Name="AccountStackPanel" 
+                                Style="{StaticResource MenuStackPanel}"
+                                MouseDown="AccountStackPanel_MouseDown">
+                        <Image Source="https://img.icons8.com/ios/344/guest-male.png" Width="30"/>
+                        <TextBlock Text="Профиль"
+                           Style="{StaticResource MenuBarTextStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Name="CourseStackPanel"
+                                Style="{StaticResource MenuStackPanel}"
+                                MouseDown="CourseStackPanel_MouseDown">
+                        <Image Source="https://img.icons8.com/dotty/344/apps-tab.png" Width="30" />
+                        <TextBlock Text="Курсы"
+                           Style="{StaticResource MenuBarTextStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            <Grid x:Name="CoursesGrid"
+                  Grid.Row="1" Grid.Column="1"
+                  Visibility="Hidden">
+                <WrapPanel Name="CoursesWrapPanel">
+                </WrapPanel>
+            </Grid>
+
+            <Grid x:Name="ProfileGrid"
+                  Grid.Row="1" Grid.Column="1"
+                  Visibility="Hidden">
+                <StackPanel>
+                    <TextBlock Text="Логин: " Style="{StaticResource ProfileGridTextBlock}"/>
+                    <TextBlock Name="LoginUserInfo" Style="{StaticResource ProfileGridUserInfoTextBlock}"/>
+                    <TextBlock Text="Имя пользователя: " Style="{StaticResource ProfileGridTextBlock}"/>
+                    <TextBlock Name="FullNameUserInfo" Style="{StaticResource ProfileGridUserInfoTextBlock}"/>
+                    <TextBlock Text="Почта: " Style="{StaticResource ProfileGridTextBlock}"/>
+                    <TextBlock Name="EmailUserInfo" Style="{StaticResource ProfileGridUserInfoTextBlock}"/>
+                </StackPanel>
+
+
+            </Grid>
+
+
+            <Grid x:Name="CurrentCourseGrid"
+                  Grid.Column="1"
+                  Visibility="Hidden">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="WPF DESIGN" 
+                           x:Name="CourseTitle"
+                           Style="{StaticResource CourseGirdTitleTextBlock}"/>
+                    <TextBlock Text="WPF DESIGN" 
+                           x:Name="CourseDiscription"
+                           Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
+                </StackPanel>
+   
+            </Grid>
+        </Grid>
+        
+
+    </Grid>
+
+</Window>
