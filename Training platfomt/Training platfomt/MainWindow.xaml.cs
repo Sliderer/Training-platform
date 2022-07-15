@@ -126,24 +126,8 @@ namespace Training_platfomt
         {
             EnterGrid.Visibility = Visibility.Hidden;
             AccountGrid.Visibility = Visibility.Visible;
-            FillUserInfo();
-            FillCoursesWrapPanel();
-        }
-
-        private void FillUserInfo()
-        {
-            LoginUserInfo.Text = currentUser.login;
-            FullNameUserInfo.Text = currentUser.name + " " + currentUser.surname;
-            EmailUserInfo.Text = currentUser.email;
-        }
-
-        private void FillCoursesWrapPanel()
-        {
-            List<CoursePanel> coursePanels = CoursePanelsGenerator.GeneratePanels(database).ToList();
-            foreach (var panel in coursePanels)
-            {
-                CoursesWrapPanel.Children.Add(panel);
-            }
+            FillInfoController.FillUserInfo(currentUser, this);
+            FillInfoController.FillCoursesWrapPanel(database, this);
         }
 
         private void CourseStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
@@ -166,25 +150,18 @@ namespace Training_platfomt
         {
             string title = (sender as CoursePanel).CourseTitle.Text;
             Course chosenCourse = mainWindow.database.GetCourse(title);
-
-            mainWindow.FillCourseGrid(chosenCourse);
+            List<Video> videos = mainWindow.database.GetCourseVideos(chosenCourse.id).ToList();
+            FillInfoController.FillCourseGrid(chosenCourse, videos, mainWindow.CurrentCourseGrid, mainWindow);
         }
 
-        private void FillCourseGrid(Course course)
-        {
-            ChangeGridinAccount(CurrentCourseGrid);
-            CourseTitle.Text = course.title;
-            CourseDiscription.Text = course.discription;
-            CourseVideo.Source = new Uri(course.link);
-        }
-
-        private void ChangeGridinAccount(Grid grid)
+        internal void ChangeGridinAccount(Grid grid)
         {
             if (lastUsedGrid != null)
             {
                 lastUsedGrid.Visibility = Visibility.Hidden;
             }
             grid.Visibility = Visibility.Visible;
+
             lastUsedGrid = grid;
         }
     }

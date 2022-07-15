@@ -29,6 +29,10 @@
         </Setter>
     </Style>
 
+    <Style x:Key="{x:Type TextBlock}" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    
     <Style x:Key="MenuBarTextStyle" x:Name="TextStyle" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>

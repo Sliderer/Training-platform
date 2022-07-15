@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800"
         WindowStyle="None"
+        ResizeMode="CanResize"
         AllowsTransparency="False">
 
     <Grid>
@@ -19,7 +20,8 @@
         <Grid Grid.Row="0"
               Name="ToolBarGrid"
               Background="{StaticResource Dark}"
-              MouseDown="ToolBarGrid_MouseDown">
+              MouseDown="ToolBarGrid_MouseDown"
+              Panel.ZIndex="1">
 
             <Button Name="ExitButton" 
                     Style="{StaticResource ToolBarButton}"
@@ -44,7 +46,7 @@
               Visibility="Visible"
               Grid.Row="1">
 
-           
+
 
             <Grid x:Name="RegistrationGrid"
                   Visibility="Hidden">
@@ -93,7 +95,7 @@
             <Grid Name="LoginGrid" 
                   Visibility="Visible"
                   >
-                
+
                 <StackPanel Orientation="Vertical"
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Войти" Style="{StaticResource HeadingTextEnterGrid}"/>
@@ -157,7 +159,7 @@
                     </StackPanel>
                 </StackPanel>
             </Grid>
-            
+
             <Grid x:Name="CoursesGrid"
                   Grid.Row="1" Grid.Column="1"
                   Visibility="Hidden">
@@ -183,24 +185,26 @@
 
             <Grid x:Name="CurrentCourseGrid"
                   Grid.Column="1"
+                  Grid.Row="1"
                   Visibility="Hidden">
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Text="WPF DESIGN" 
+
+                <ScrollViewer Panel.ZIndex="0">
+                    <StackPanel x:Name="CurrentCourseStackPanel"
+                                Orientation="Vertical">
+                        <TextBlock Text="WPF DESIGN" 
                            x:Name="CourseTitle"
                            Style="{StaticResource CourseGirdTitleTextBlock}"/>
-                    <TextBlock Text="WPF DESIGN" 
+                        <TextBlock Text="WPF DESIGN" 
                            x:Name="CourseDiscription"
                            Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
 
-                    <wpf:WebView2 Name="CourseVideo"
-                                  Height="200" Width="600"
-                                  HorizontalAlignment="Left" VerticalAlignment="Top"
-                                  Margin="10"/>
-                </StackPanel>
-   
+
+                    </StackPanel>
+                </ScrollViewer>
+
             </Grid>
         </Grid>
-        
+
 
     </Grid>
 

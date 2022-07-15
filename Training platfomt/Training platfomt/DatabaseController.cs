@@ -49,7 +49,7 @@ namespace Training_platfomt
             while (dataReader.Read())
             {
                 yield return new Course() {id = Convert.ToInt32(dataReader["id"]), discription = dataReader["discription"].ToString(),
-                                           title = dataReader["title"].ToString(), link = dataReader["link"].ToString()};
+                                           title = dataReader["title"].ToString()};
             }
             dataReader.Close();
         }
@@ -62,10 +62,22 @@ namespace Training_platfomt
             while (dataReader.Read())
             {
                 course = new Course() { id = Convert.ToInt32(dataReader["id"]), title = dataReader["title"].ToString(), 
-                                        discription = dataReader["discription"].ToString(), link = dataReader["link"].ToString()};
+                                        discription = dataReader["discription"].ToString()};
             }
             dataReader.Close();
             return course;
+        }
+
+        public IEnumerable<Video> GetCourseVideos(int course_id)
+        {
+            SqlCommand command = new SqlCommand($"select * from Videos where course_id = {course_id}", sqlConnection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                yield return new Video() { id = Convert.ToInt32(dataReader["id"]), title = dataReader["title"].ToString(),
+                                           link = dataReader["link"].ToString(), course_id = Convert.ToInt32(dataReader["course_id"])};
+            }
+            dataReader.Close();
         }
 
         private void AddNewRoll(User user)

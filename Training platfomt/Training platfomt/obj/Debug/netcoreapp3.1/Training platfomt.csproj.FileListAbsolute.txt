@@ -43,13 +43,11 @@ C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Tr
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt.csproj.AssemblyReference.cache
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Dictionary.baml
-C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\CoursePanel.g.cs
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt_MarkupCompile.cache
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt_MarkupCompile.lref
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\CoursePanel.baml
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt.g.resources
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt.GeneratedMSBuildEditorConfig.editorconfig
@@ -67,3 +65,7 @@ C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Tr
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\Training platfomt_Content.g.cs
+C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\User controls\CoursePanel.g.cs
+C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\User controls\CoursePanel.baml
+C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\User controls\VideoViewer.g.cs
+C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\obj\Debug\netcoreapp3.1\User controls\VideoViewer.baml

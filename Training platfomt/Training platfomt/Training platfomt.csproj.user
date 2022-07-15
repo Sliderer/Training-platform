@@ -7,18 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="CoursePanel.xaml.cs">
+    <Compile Update="User controls\CoursePanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User controls\VideoViewer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="CoursePanel.xaml">
+    <Page Update="User controls\CoursePanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Dictionary.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User controls\VideoViewer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
