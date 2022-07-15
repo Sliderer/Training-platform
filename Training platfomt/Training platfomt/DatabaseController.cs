@@ -68,6 +68,12 @@ namespace Training_platfomt
             return course;
         }
 
+        public void AddCourse(Course course)
+        {
+            SqlCommand command = new SqlCommand($"insert into Courses (title, discription) values ('{course.title}', '{course.discription}')", sqlConnection);
+            command.ExecuteNonQuery();
+        }
+
         public IEnumerable<Video> GetCourseVideos(int course_id)
         {
             SqlCommand command = new SqlCommand($"select * from Videos where course_id = {course_id}", sqlConnection);
@@ -80,12 +86,31 @@ namespace Training_platfomt
             dataReader.Close();
         }
 
+        public void AddVideo(Video video)
+        {
+            SqlCommand command = new SqlCommand($"insert into Videos (title, link, course_id) values ('{video.title}', '{video.link}', '{video.course_id}')", sqlConnection);
+            command.ExecuteNonQuery();
+        }
+
         private void AddNewRoll(User user)
         {
             int id = FindUser(user.login).id;
             SqlCommand command = new SqlCommand($"insert into Roles (user_id, roll) values ({id}, 'user')", sqlConnection);
             command.ExecuteNonQuery();
         } 
+
+        public string GetRoll(User user)
+        {
+            string roll = "";
+            SqlCommand command = new SqlCommand($"select roll from Roles where user_id = {user.id}", sqlConnection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            if (dataReader.Read())
+            {
+                roll = dataReader["roll"].ToString();
+            }
+            dataReader.Close();
+            return roll;
+        }
 
         ~DatabaseController()
         {

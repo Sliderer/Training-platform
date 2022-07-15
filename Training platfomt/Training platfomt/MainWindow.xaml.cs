@@ -94,8 +94,7 @@ namespace Training_platfomt
 
             User user = new User(name, surname, login, email, password.GetHash());
             database.AddUser(user);
-            currentUser = user;
-            EnterAccount();
+            EnterAccount(user);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -108,8 +107,7 @@ namespace Training_platfomt
             {
                 if (user.password == password)
                 {
-                    currentUser = user;
-                    EnterAccount();
+                    EnterAccount(user);
                 }
                 else
                 {
@@ -122,8 +120,20 @@ namespace Training_platfomt
             }
         }
 
-        private void EnterAccount()
+        private void EnterAccount(User user)
         {
+            currentUser = user;
+            string roll = database.GetRoll(user);
+
+            if (roll == "admin")
+            {
+                AddCourseStackPanel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AddCourseStackPanel.Visibility = Visibility.Hidden;
+            }
+
             EnterGrid.Visibility = Visibility.Hidden;
             AccountGrid.Visibility = Visibility.Visible;
             FillInfoController.FillUserInfo(currentUser, this);
@@ -138,11 +148,19 @@ namespace Training_platfomt
             }
         }
 
-        private void AccountStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        public void AccountStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (lastUsedGrid != ProfileGrid)
             {
                 ChangeGridinAccount(ProfileGrid);
+            }
+        }
+
+        private void AddCourseStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (lastUsedGrid != AddCurrentCourseGrid)
+            {
+                ChangeGridinAccount(AddCurrentCourseGrid);
             }
         }
 
@@ -163,6 +181,24 @@ namespace Training_platfomt
             grid.Visibility = Visibility.Visible;
 
             lastUsedGrid = grid;
+        }
+
+        private void AddNewCourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            string title = NewCourseTitleTextBox.Text;
+            string discription = NewCourseDiscriptionTextBox.Text;
+            List<string> links = NewCourseLinksTextBox.Text.Split(' ', '\n').ToList();
+
+            Course course = new Course() {id = 0, title = title, discription = discription };
+            database.AddCourse(course);
+
+            int courseId = database.GetCourse(course.title).id;
+
+            foreach(var link in links)
+            {
+                Video video = new Video() {id= 0, link = link, title = "", course_id = courseId };
+                database.AddVideo(video);
+            }
         }
     }
 }

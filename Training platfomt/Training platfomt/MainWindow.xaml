@@ -142,10 +142,12 @@
 
 
                 <StackPanel>
+
                     <StackPanel Name="AccountStackPanel" 
                                 Style="{StaticResource MenuStackPanel}"
                                 MouseDown="AccountStackPanel_MouseDown">
                         <Image Source="https://img.icons8.com/ios/344/guest-male.png" Width="30"/>
+
                         <TextBlock Text="Профиль"
                            Style="{StaticResource MenuBarTextStyle}"/>
                     </StackPanel>
@@ -157,6 +159,16 @@
                         <TextBlock Text="Курсы"
                            Style="{StaticResource MenuBarTextStyle}"/>
                     </StackPanel>
+
+                    <StackPanel Name="AddCourseStackPanel"
+                                Style="{StaticResource MenuStackPanel}"
+                                Visibility="Hidden"
+                                MouseDown="AddCourseStackPanel_MouseDown">
+                        <Image Source="https://img.icons8.com/dotty/344/plus.png" Width="30" />
+                        <TextBlock Text="Добавить курс" 
+                           Style="{StaticResource MenuBarTextStyle}"/>
+                    </StackPanel>
+
                 </StackPanel>
             </Grid>
 
@@ -203,9 +215,36 @@
                 </ScrollViewer>
 
             </Grid>
+            <Grid x:Name="AddCurrentCourseGrid"
+                  Grid.Column="1"
+                  Grid.Row="1"
+                  Visibility="Hidden">
+
+                <ScrollViewer Panel.ZIndex="0">
+                    <StackPanel x:Name="AddCurrentCourseStackPanel"
+                                Orientation="Vertical">
+
+                        <TextBlock Text="Название" 
+                           Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
+                        <TextBox x:Name="NewCourseTitleTextBox" Style="{StaticResource NewCourseTextBox}"/>
+
+                        <TextBlock Text="Описание" 
+                           Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
+                        <TextBox x:Name="NewCourseDiscriptionTextBox"  Style="{StaticResource NewCourseTextBox}"/>
+
+                        <TextBlock Text="Ссылки на видео через пробел" 
+                           Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
+                        <TextBox x:Name="NewCourseLinksTextBox" Style="{StaticResource NewCourseTextBox}"/>
+
+                        <Button x:Name="AddNewCourseButton"
+                                Content="Добавить курс"
+                                Style="{StaticResource MainEnterGridButton}"
+                                HorizontalAlignment="Left"
+                                Click="AddNewCourseButton_Click"/>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Grid>
         </Grid>
-
-
     </Grid>
-
 </Window>
