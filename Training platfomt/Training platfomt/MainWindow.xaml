@@ -198,9 +198,12 @@
             <Grid x:Name="CurrentCourseGrid"
                   Grid.Column="1"
                   Grid.Row="1"
-                  Visibility="Hidden">
+                  Visibility="Hidden"
+                  IsVisibleChanged="CurrentCourseGrid_IsVisibleChanged">
 
-                <ScrollViewer Panel.ZIndex="0">
+                <ScrollViewer Panel.ZIndex="0" 
+                              Grid.Column="1"
+                              Grid.Row="1" >
                     <StackPanel x:Name="CurrentCourseStackPanel"
                                 Orientation="Vertical">
                         <TextBlock Text="WPF DESIGN" 
@@ -209,7 +212,9 @@
                         <TextBlock Text="WPF DESIGN" 
                            x:Name="CourseDiscription"
                            Style="{StaticResource CourseGirdDiscriptionTextBlock}"/>
-
+                        <StackPanel x:Name="CurrentCourseVideoPanel">
+                            
+                        </StackPanel>
 
                     </StackPanel>
                 </ScrollViewer>

@@ -199,6 +199,25 @@ namespace Training_platfomt
                 Video video = new Video() {id= 0, link = link, title = "", course_id = courseId };
                 database.AddVideo(video);
             }
+
+            NewCourseTitleTextBox.Text = "";
+            NewCourseDiscriptionTextBox.Text = "";
+            NewCourseLinksTextBox.Text = "";
+
+            MessageBox.Show("Новый курс добавлен!");
+        }
+
+        private void CurrentCourseGrid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            foreach (object child in CurrentCourseVideoPanel.Children)
+            {
+                if (child is VideoViewer)
+                {
+                    VideoViewer video = child as VideoViewer;
+                    video.CourseVideo.Source = new Uri("https://www.google.ru/?gws_rd=ssl");
+                }
+            }
+            CurrentCourseVideoPanel.Children.Clear();
         }
     }
 }

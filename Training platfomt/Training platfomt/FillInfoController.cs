@@ -34,7 +34,7 @@ namespace Training_platfomt
                 VideoViewer videoViewer = new VideoViewer();
                 videoViewer.CourseVideo.Source = new Uri(video.link);
                 videoViewer.VideoTitle.Text = video.title;
-                mainWindow.CurrentCourseStackPanel.Children.Add(videoViewer);
+                mainWindow.CurrentCourseVideoPanel.Children.Add(videoViewer);
             }
         }
     }

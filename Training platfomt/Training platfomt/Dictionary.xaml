@@ -47,6 +47,8 @@
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Padding" Value="10"/> 
         <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontFamily" Value="c:\users\a6271\onedrive\рабочий стол\repositoies\training-platform\training platfomt\training platfomt\vogue bold.ttf
+"/>
         <Setter Property="Foreground" Value="{StaticResource Black}"/>
     </Style>
 
