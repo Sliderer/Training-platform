@@ -85,33 +85,42 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style.Setters>
-
+        </Style.Setters> 
     </Style>
 
     <Style x:Key="MainEnterGridButton" TargetType="Button">
-        <Setter Property="Width" Value="150"/>
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Margin" Value="10"/>
-        <Setter Property="FontSize" Value="15"/>
-        <Setter Property="Background" Value="{StaticResource Dark}"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style.Setters>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Background" Value="{StaticResource Dark}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
 
-        <Setter Property="Button.Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="10"
+            <Setter Property="Button.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10"
                                 Background="{TemplateBinding Background}"
                                 >
 
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                               />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Green}"/>
+            </Trigger>
+        </Style.Triggers>
+
+
     </Style>
 
     <Style x:Key="EnterGridButton" TargetType="Button">

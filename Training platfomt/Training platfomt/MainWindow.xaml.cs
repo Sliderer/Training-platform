@@ -45,7 +45,14 @@ namespace Training_platfomt
 
         private void MaximizedButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Maximized;
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+            }
+            else
+            {
+                WindowState = WindowState.Maximized;
+            }
         }
 
         private void ToolBarGrid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -89,10 +96,16 @@ namespace Training_platfomt
 
             if (database.FindUser(login) != null)
             {
-                return;
+                MessageBox.Show("Пользователь с таким логином уже существует!");
             }
 
             User user = new User(name, surname, login, email, password.GetHash());
+
+            if (!TextBoxesCheker.CheckUser(user))
+            {
+                return;
+            }
+
             database.AddUser(user);
             EnterAccount(user);
         }
@@ -103,6 +116,7 @@ namespace Training_platfomt
             string password = LoginPasswordTextBox.Text.GetHash();
 
             User user = database.FindUser(login);
+
             if (user != null)
             {
                 if (user.password == password)

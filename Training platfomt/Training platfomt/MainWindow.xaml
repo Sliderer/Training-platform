@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Training_platfomt"
         xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800"
+        Title="MainWindow"
+        Height="500" Width="800"
+        Name="MainWindowXAML"
         WindowStyle="None"
         ResizeMode="CanResize"
         AllowsTransparency="False">
