@@ -115,7 +115,7 @@ namespace Training_platfomt
             string login = LoginLoginTextBox.Text;
             string password = LoginPasswordTextBox.Text.GetHash();
 
-            User user = database.FindUser(login);
+            User user = database.FindUser(login);  
 
             if (user != null)
             {
@@ -213,6 +213,8 @@ namespace Training_platfomt
                 Video video = new Video() {id= 0, link = link, title = "", course_id = courseId };
                 database.AddVideo(video);
             }
+
+            EmailSender.SendNotificationAboutNewCourse(database);
 
             NewCourseTitleTextBox.Text = "";
             NewCourseDiscriptionTextBox.Text = "";

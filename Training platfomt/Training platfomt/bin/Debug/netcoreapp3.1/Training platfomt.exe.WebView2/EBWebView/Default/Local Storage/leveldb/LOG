@@ -1,3 +1,5 @@
-2022/07/16-16:38:26.930 950 Reusing MANIFEST C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\Training platfomt.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2022/07/16-16:38:26.931 950 Recovering log #3
-2022/07/16-16:38:26.934 950 Reusing old log C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\Training platfomt.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
+2022/07/18-14:00:47.712 5bbc Reusing MANIFEST C:\Users\a6271\OneDrive\Рабочий стол\Repositoies\Training-platform\Training platfomt\Training platfomt\bin\Debug\netcoreapp3.1\Training platfomt.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2022/07/18-14:00:47.715 5bbc Recovering log #3
+2022/07/18-14:00:47.716 5bbc Level-0 table #3: started
+2022/07/18-14:00:47.719 5bbc Level-0 table #3: 10647 bytes OK
+2022/07/18-14:00:47.734 5bbc Delete type=0 #3

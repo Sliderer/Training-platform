@@ -14,6 +14,12 @@ namespace Training_platfomt
             if (!ThowError(user.surname, 0, 50, "Заполните фамилию!")) return false;
             if (!ThowError(user.password, 8, 50, "Длина пароля должна быть больше 8 и меньше 50")) return false;
 
+            if (!EmailSender.SendWelcomEmail(user.email))
+            {
+                MessageBox.Show("Такой почты не существует!");
+                return false;
+            }
+
             return true;
         }
 

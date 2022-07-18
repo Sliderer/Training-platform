@@ -112,6 +112,17 @@ namespace Training_platfomt
             return roll;
         }
 
+        public IEnumerable<string> GetAllEmails()
+        {
+            SqlCommand command = new SqlCommand("select email from Users", sqlConnection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                yield return dataReader["email"].ToString();
+            }
+            dataReader.Close();
+        }
+
         ~DatabaseController()
         {
             sqlConnection.Close();
